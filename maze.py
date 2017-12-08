@@ -1,17 +1,19 @@
+import player 
+
 def build_maze():
 
-	array = [] 
+	maze = [] 
 
-	with open("data/maze_structure.txt", "r") as data:
+	with open("data/maze_structure.txt", "r") as maze_data:
 
 		while True:
 
-			x = data.readline()
-			array.append(list(x))
+			line = maze_data.readline()
+			maze.append(list(line))
 
-			if not x: break
+			if not line: break
 
-	for row in array:
+	for row in maze:
 		print(" ".join(map(str, row)))
 
 if __name__ == '__main__':
